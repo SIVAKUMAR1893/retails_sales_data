@@ -1,0 +1,6 @@
+- Dataset: Redshift > sales
+- Charts:
+  - Top-Selling Products (bar chart)
+  - Daily Sales Trend (line chart)
+  - Sales by Category (pie chart)
+- Filters: Date, Category, Product ID

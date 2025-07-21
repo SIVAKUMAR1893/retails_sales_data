@@ -1,0 +1,22 @@
+{
+    "StartAt": "TransformData",
+    "States": {
+      "TransformData": {
+        "Type": "Task",
+        "Resource": "arn:aws:states:::glue:startJobRun.sync",
+        "Parameters": {
+          "JobName": "transform_sales_data"
+        },
+        "Next": "LoadToRedshift"
+      },
+      "LoadToRedshift": {
+        "Type": "Task",
+        "Resource": "arn:aws:states:::glue:startJobRun.sync",
+        "Parameters": {
+          "JobName": "load_to_redshift"
+        },
+        "End": true
+      }
+    }
+  }
+  
