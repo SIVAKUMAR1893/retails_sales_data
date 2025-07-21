@@ -1,3 +1,4 @@
+
 resource "aws_redshift_cluster" "analytics" {
   cluster_identifier = "retail-cluster"
   node_type          = "dc2.large"
